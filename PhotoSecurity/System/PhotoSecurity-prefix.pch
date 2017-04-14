@@ -35,8 +35,7 @@
 //友盟统计
 #define UM_APP_KEY @"58ef4c3f677baa02f1000664"
 
-
-
+#define MarkUrl @"https://api.52kandianying.cn/index.html?method=mark&appid=169&id=51"
 /*******************
  APP评分跳转链接
  ******************* */

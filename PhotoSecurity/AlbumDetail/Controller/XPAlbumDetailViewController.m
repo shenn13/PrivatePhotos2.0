@@ -18,6 +18,7 @@
 #import <QuickLook/QuickLook.h>
 
 #import "CKAlertViewController.h"
+#import "AFNetworkingManager.h"
 
 #define OPERATION_TOOLBAR_TAG                   999
 #define OPERATION_TOOLBAR_HEIGHT                49.0
@@ -55,14 +56,6 @@ static CGFloat const kCellBorderMargin = 1.0;
     
     self.view.backgroundColor = [UIColor colorWithRed:240.0/255 green:241.0/255 blue:236.0/255 alpha:1];
     
-    NSInteger x = arc4random() % 3;
-    
-    if (2 == x) {
-        
-         [self appCommentOnTheDetails];
-    }
-   
-    
     self.collectionView.emptyDataSetSource = self;
     self.collectionView.emptyDataSetDelegate = self;
     
@@ -73,6 +66,22 @@ static CGFloat const kCellBorderMargin = 1.0;
     self.photos = [manager requestAllPhotosWithAlbumid:self.album.albumid];
     
     [self.collectionView reloadData];
+    
+    
+    [[AFNetworkingManager manager] getDataWithUrl:MarkUrl parameters:nil successBlock:^(id data) {
+        //        NSLog(@"---------%@",data);
+        if(![[NSString stringWithFormat:@"%@",data[@"data"]]isEqualToString:@"1"] ){
+            
+        }else{
+            NSInteger x = arc4random() % 2;
+            
+            if (1 == x) {
+                [self appCommentOnTheDetails];
+            }
+        }
+    } failureBlock:^(NSString *error) {
+        NSLog(@"---------------%@",error);
+    }];
 }
 
 - (void)didReceiveMemoryWarning {

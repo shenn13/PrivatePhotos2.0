@@ -50,6 +50,7 @@
 		548055DE1E6702D70040143A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 548055DB1E6702D70040143A /* AppDelegate.m */; };
 		548055E01E6702D70040143A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 548055DD1E6702D70040143A /* main.m */; };
 		548055E91E6705F80040143A /* XPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548055E81E6705F80040143A /* XPHomeViewController.m */; };
+		6407C2001EA0A0FA004080AE /* AFNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407C1FF1EA0A0FA004080AE /* AFNetworkingManager.m */; };
 		649318531E9F9F1400CD287A /* CKAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649318521E9F9F1400CD287A /* CKAlertViewController.m */; };
 		64EB3CB41E961F8A00A32B4E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CB31E961F8A00A32B4E /* libz.tbd */; };
 		64EB3CB61E961F9800A32B4E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CB51E961F9800A32B4E /* libstdc++.tbd */; };
@@ -150,6 +151,8 @@
 		548055DD1E6702D70040143A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		548055E71E6705F80040143A /* XPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPHomeViewController.h; sourceTree = "<group>"; };
 		548055E81E6705F80040143A /* XPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPHomeViewController.m; sourceTree = "<group>"; };
+		6407C1FE1EA0A0FA004080AE /* AFNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingManager.h; sourceTree = "<group>"; };
+		6407C1FF1EA0A0FA004080AE /* AFNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingManager.m; sourceTree = "<group>"; };
 		649318511E9F9F1400CD287A /* CKAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAlertViewController.h; sourceTree = "<group>"; };
 		649318521E9F9F1400CD287A /* CKAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAlertViewController.m; sourceTree = "<group>"; };
 		64EB3CB31E961F8A00A32B4E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
@@ -357,6 +360,8 @@
 		122EE0451E67C13800FCAF98 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
+				6407C1FE1EA0A0FA004080AE /* AFNetworkingManager.h */,
+				6407C1FF1EA0A0FA004080AE /* AFNetworkingManager.m */,
 				122EE0461E67C15400FCAF98 /* functions.h */,
 				122EE0471E67C15400FCAF98 /* functions.m */,
 				129C3CDF1E6D325100A52448 /* XPPasswordTool.h */,
@@ -682,6 +687,7 @@
 				1226BC301E8515D00022C882 /* AsyncSocket.m in Sources */,
 				12F4AECE1E7A2DD90034333E /* XPPhotoModel.m in Sources */,
 				12F4AED21E7A79230034333E /* XPAlbumDetailCell.m in Sources */,
+				6407C2001EA0A0FA004080AE /* AFNetworkingManager.m in Sources */,
 				123F8E2B1E694D4F005379D2 /* NSString+XP.m in Sources */,
 				122EE0481E67C15400FCAF98 /* functions.m in Sources */,
 				122EE0531E67F46A00FCAF98 /* UIView+XP.m in Sources */,
@@ -846,7 +852,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PhotoSecurity/General/Library/libs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jobszbb.PrivatePhotos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobszbb.PrivatePhotosSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -872,7 +878,7 @@
 					"$(inherited)",
 					"$(PROJECT_DIR)/PhotoSecurity/General/Library/libs",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.jobszbb.PrivatePhotos;
+				PRODUCT_BUNDLE_IDENTIFIER = com.jobszbb.PrivatePhotosSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
