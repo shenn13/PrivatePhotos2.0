@@ -39,7 +39,7 @@
 /*******************
  APP评分跳转链接
  ******************* */
-#define APPCommentURL @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1196204999&pageNumber=0&sortOrdering=2&mt=8"
+#define APPCommentURL @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1226885234&pageNumber=0&sortOrdering=2&mt=8"
 
 /// 处理Block循环引用
 #define weakify(obj)    autoreleasepool{} __weak __typeof(obj) weak##obj = obj;
