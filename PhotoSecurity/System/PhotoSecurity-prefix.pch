@@ -33,7 +33,7 @@
 #define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
 
 //友盟统计
-#define UM_APP_KEY @"58ef4c3f677baa02f1000664"
+#define UM_APP_KEY @"58f55554bbea83726f000775"
 
 #define MarkUrl @"https://api.52kandianying.cn/index.html?method=mark&appid=169&id=51"
 /*******************
