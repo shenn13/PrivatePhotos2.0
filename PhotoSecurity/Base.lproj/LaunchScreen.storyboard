@@ -20,13 +20,25 @@
                     <view key="view" contentMode="scaleToFill" id="Ze5-6b-2t3">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
-                        <color key="backgroundColor" red="0.94887505760000002" green="0.61339721920000001" blue="0.84228187919999997" alpha="1" colorSpace="calibratedRGB"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xkq-4Q-d5S">
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                                <color key="backgroundColor" red="1" green="0.30192684749999998" blue="0.47388041689999999" alpha="1" colorSpace="calibratedRGB"/>
+                            </imageView>
+                        </subviews>
+                        <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="xkq-4Q-d5S" firstAttribute="top" secondItem="Ze5-6b-2t3" secondAttribute="top" id="9NA-en-5gZ"/>
+                            <constraint firstAttribute="trailing" secondItem="xkq-4Q-d5S" secondAttribute="trailing" id="Q3v-eQ-eYB"/>
+                            <constraint firstItem="xb3-aO-Qok" firstAttribute="top" secondItem="xkq-4Q-d5S" secondAttribute="bottom" id="SyP-xO-xer"/>
+                            <constraint firstItem="xkq-4Q-d5S" firstAttribute="leading" secondItem="Ze5-6b-2t3" secondAttribute="leading" id="ziJ-ZD-IY9"/>
+                        </constraints>
                     </view>
                     <simulatedStatusBarMetrics key="simulatedStatusBarMetrics" statusBarStyle="lightContent"/>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="iYj-Kq-Ea1" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="53" y="375"/>
+            <point key="canvasLocation" x="52" y="374.66266866566718"/>
         </scene>
     </scenes>
 </document>

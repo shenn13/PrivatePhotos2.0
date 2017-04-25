@@ -6,4 +6,6 @@ pod 'IQKeyboardManager'
 pod 'DZNEmptyDataSet'
 pod 'FMDB'
 pod 'AFNetworking'
+pod 'Firebase/AdMob'
+pod 'UMengAnalytics'
 end

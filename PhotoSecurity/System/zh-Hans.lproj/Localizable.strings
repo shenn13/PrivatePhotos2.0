@@ -57,6 +57,13 @@
 "After opening, you can quickly copy the photos through the FTP server" = "开启后，你可以通过FTP服务器快速地将图片拷贝出来";
 "FTP server failed to open, please confirm open WIFI and connect WIFI" = "FTP服务器启动失败，请确认已成功连接WIFI";
 
-"Give a high praise!!!~~~~~~~"= "给个好评吧~~~~~亲~~~~~";
+
+"Set Password" = "设置密码";
+"Unlock" = "解锁";
+
+"please give a high praise!!!~~~~~~~"= "给个好评吧~~~~~亲~~~~~";
 "No~~" = "算啦";
 "OK~~" = "好哒";
+"Found the new version, whether to download the new version?" = "发现新版本,是否下载新版本？";
+"Update" = "升级提示";
+

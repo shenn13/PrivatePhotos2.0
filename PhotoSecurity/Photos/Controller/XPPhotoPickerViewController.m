@@ -33,9 +33,13 @@
 
 - (void)viewDidLoad {
     [super viewDidLoad];
-    self.tableView.cellLayoutMarginsFollowReadableWidth = NO;
     
-      self.view.backgroundColor = [UIColor colorWithRed:240.0/255 green:241.0/255 blue:236.0/255 alpha:1];
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:242.0/255 green:156.0/255 blue:177.0/255 alpha:1]];
+    
+    self.view.backgroundColor = [UIColor colorWithRed:240.0/255 green:241.0/255 blue:236.0/255 alpha:1];
+    
+    
+    self.tableView.cellLayoutMarginsFollowReadableWidth = NO;
     
     self.navigationItem.leftBarButtonItem = [[UIBarButtonItem alloc] initWithImage:[[UIImage imageNamed:@"icon-back"] imageWithRenderingMode:UIImageRenderingModeAlwaysOriginal] style:UIBarButtonItemStylePlain target:self action:@selector(dismissButtonAction:)];
     self.tableView.tableFooterView = [[UIView alloc] init];

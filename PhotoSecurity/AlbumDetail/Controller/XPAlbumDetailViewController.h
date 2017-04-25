@@ -10,7 +10,6 @@
 
 @class XPAlbumModel;
 
-
 @interface XPAlbumDetailViewController : UICollectionViewController
 
 @property (nonatomic, strong) XPAlbumModel *album;

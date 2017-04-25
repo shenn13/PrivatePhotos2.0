@@ -24,10 +24,12 @@
 - (void)viewDidLoad {
     [super viewDidLoad];
     // Do any additional setup after loading the view.
-      self.view.backgroundColor = [UIColor colorWithRed:240.0/255 green:241.0/255 blue:236.0/255 alpha:1];
     
     _passLogoView.layer.cornerRadius = _passLogoView.frame.size.width/2;
     _passLogoView.layer.masksToBounds = YES;
+
+    
+    self.view.backgroundColor = [UIColor colorWithRed:240.0/255 green:241.0/255 blue:236.0/255 alpha:1];
 }
 
 - (void)didReceiveMemoryWarning {
@@ -38,7 +40,6 @@
 #pragma mark - Actions
 
 - (IBAction)setPasswordButtonAction:(UIButton *)sender {
-    
     NSString *pwd = [self.passwordTextField.text trim];
     NSString *confirmPwd = [self.confirmPasswordTextField.text trim];
     if (0 == pwd.length) {

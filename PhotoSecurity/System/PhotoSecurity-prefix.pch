@@ -17,6 +17,7 @@
 #import "UIImage+XP.h"
 #import "NSString+XP.h"
 #import "UIColor+XP.h"
+#import "Image+Snapshot.h"
 
 #import "XPPasswordTool.h"
 #import "XPProgressHUD.h"
@@ -26,11 +27,20 @@
 /////////////////
 ////    宏   ////
 /////////////////
+
 //屏幕的宽和高
 #define kScreenWidth [UIScreen mainScreen].bounds.size.width
 #define kScreenHeight [UIScreen mainScreen].bounds.size.height
 
+#define kMainScreenColor [UIColor colorWithRed:0.004 green:0.651 blue:0.996 alpha:1.000]
+
 #define IS_OS_7_OR_LATER    ([[[UIDevice currentDevice] systemVersion] floatValue] >= 7.0)
+
+//AdMob APPID 原生广告ID 插屏广告ID  所有APP固定 三个ID
+#define AdMob_APP_ID @"ca-app-pub-1195236589504706~3275735870"
+//#define AdMob_NativeExpressAdUnitID @"ca-app-pub-1195236589504706/3034207071"
+#define AdMob_CID @"ca-app-pub-1195236589504706/6229202274"
+#define AdMob_BannerViewAdUnitID @"ca-app-pub-1195236589504706/4752469073"
 
 //友盟统计
 #define UM_APP_KEY @"58f55554bbea83726f000775"
@@ -40,6 +50,7 @@
  APP评分跳转链接
  ******************* */
 #define APPCommentURL @"itms-apps://itunes.apple.com/WebObjects/MZStore.woa/wa/viewContentsUserReviews?type=Purple+Software&id=1226885234&pageNumber=0&sortOrdering=2&mt=8"
+
 
 /// 处理Block循环引用
 #define weakify(obj)    autoreleasepool{} __weak __typeof(obj) weak##obj = obj;

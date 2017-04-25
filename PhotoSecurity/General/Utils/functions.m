@@ -28,8 +28,8 @@ NSString* photoRootDirectory()
 /**
  检测相册根目录,如果不存在则创建
  */
-void checkPhotoRootDirectory(){
-    
+void checkPhotoRootDirectory()
+{
     NSString *photoRootDir = photoRootDirectory();
     NSFileManager *fileManager = [NSFileManager defaultManager];
     BOOL isDirectory = YES;
@@ -118,6 +118,25 @@ BOOL isEnableTouchID()
     NSError *error = nil;
     BOOL isSupport = [context canEvaluatePolicy:LAPolicyDeviceOwnerAuthenticationWithBiometrics error:&error];
     return (isSupport && nil == error);
+}
+
+/**
+ 判断系统版本是否大于等于给定的版本
+ 
+ @param majorVersion 主版本号
+ @param minorVersion 次版本号
+ @param patchVersion 补丁版本号
+ @return BOOL
+ */
+BOOL isOperatingSystemAtLeastVersion(NSInteger majorVersion, NSInteger minorVersion, NSInteger patchVersion)
+{
+    NSOperatingSystemVersion version = {
+                                        .majorVersion=majorVersion,
+                                        .minorVersion=minorVersion,
+                                        .patchVersion=patchVersion
+                                        };
+    NSProcessInfo *processInfo = [NSProcessInfo processInfo];
+    return [processInfo isOperatingSystemAtLeastVersion:version];
 }
 
 

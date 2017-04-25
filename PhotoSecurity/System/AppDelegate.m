@@ -20,50 +20,37 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
     self.window.backgroundColor = [UIColor whiteColor];
-    
-
     checkPhotoRootDirectory();
-    
     NSUserDefaults *userDefaults = [NSUserDefaults standardUserDefaults];
-    
     if (0 == [userDefaults stringForKey:XPEncryptionPasswordRandomKey].length) {
         NSString *random = randomString(6);
-        
         [userDefaults setObject:random forKey:XPEncryptionPasswordRandomKey];
-        
         [userDefaults synchronize];
     }
     // 初始化数据库
     [[XPSQLiteManager sharedSQLiteManager] initializationDatabase];
-
+    
     UMConfigInstance.appKey = UM_APP_KEY;
     UMConfigInstance.channelId = nil;
     [MobClick startWithConfigure:UMConfigInstance];//配置以上参数后调用此方法初始化SDK！
+    
     
     return YES;
 }
 
 
 - (void)applicationDidEnterBackground:(UIApplication *)application {
-    
     if ([XPPasswordTool isSetPassword]) {
-        
         for (UIView *subview in self.window.subviews) {
-            
             if ([subview isKindOfClass:[GHPopupEditView class]]) {
                 [subview removeFromSuperview];
             }
         }
-        
         UIViewController *rootVc = [self.window rootViewController];
-        
         if (nil == rootVc.presentedViewController || ![rootVc.presentedViewController isKindOfClass:[XPUnlockViewController class]]) {
-            
             [rootVc.presentedViewController dismissViewControllerAnimated:NO completion:nil];
-            
             UIStoryboard *mainStoryboard = [UIStoryboard storyboardWithName:@"Main" bundle:nil];
             UIViewController *unlockVc = [mainStoryboard instantiateViewControllerWithIdentifier:@"XPUnlockViewController"];
-            
             [rootVc presentViewController:unlockVc animated:NO completion:nil];
         }
     }

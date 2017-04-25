@@ -36,7 +36,10 @@ static NSString * const reuseIdentifier = @"Cell";
 
 - (void)viewDidLoad {
     [super viewDidLoad];
+    
     self.title = self.album.albumCollection.localizedTitle;
+    
+    [self.navigationController.navigationBar setBarTintColor:[UIColor colorWithRed:242.0/255 green:156.0/255 blue:177.0/255 alpha:1]];
     
     self.view.backgroundColor = [UIColor colorWithRed:240.0/255 green:241.0/255 blue:236.0/255 alpha:1];
     

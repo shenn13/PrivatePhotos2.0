@@ -15,26 +15,53 @@ PODS:
   - AFNetworking/UIKit (3.1.0):
     - AFNetworking/NSURLSession
   - DZNEmptyDataSet (1.8.1)
+  - Firebase/AdMob (3.15.0):
+    - Firebase/Core
+    - Google-Mobile-Ads-SDK (= 7.19.0)
+  - Firebase/Core (3.15.0):
+    - FirebaseAnalytics (= 3.7.0)
+    - FirebaseCore (= 3.5.2)
+  - FirebaseAnalytics (3.7.0):
+    - FirebaseCore (~> 3.5)
+    - FirebaseInstanceID (~> 1.0)
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseCore (3.5.2):
+    - GoogleToolboxForMac/NSData+zlib (~> 2.1)
+  - FirebaseInstanceID (1.0.9)
   - FMDB (2.6.2):
     - FMDB/standard (= 2.6.2)
   - FMDB/standard (2.6.2)
+  - Google-Mobile-Ads-SDK (7.19.0)
+  - GoogleToolboxForMac/Defines (2.1.1)
+  - GoogleToolboxForMac/NSData+zlib (2.1.1):
+    - GoogleToolboxForMac/Defines (= 2.1.1)
   - IQKeyboardManager (4.0.9)
   - MBProgressHUD (1.0.0)
+  - UMengAnalytics (4.2.4)
 
 DEPENDENCIES:
   - AFNetworking
   - DZNEmptyDataSet
+  - Firebase/AdMob
   - FMDB
   - IQKeyboardManager
   - MBProgressHUD
+  - UMengAnalytics
 
 SPEC CHECKSUMS:
   AFNetworking: 5e0e199f73d8626b11e79750991f5d173d1f8b67
   DZNEmptyDataSet: 9525833b9e68ac21c30253e1d3d7076cc828eaa7
+  Firebase: 2b1cdfba1cda8589f32904a697cc753322bff9d8
+  FirebaseAnalytics: 0d1b7d81d5021155be37702a94ba1ec16d45365d
+  FirebaseCore: a024587e43778508700af8c6b1209f7c4516ba02
+  FirebaseInstanceID: 2d0518b1378fe9d685ef40cbdd63d2fdc1125339
   FMDB: 854a0341b4726e53276f2a8996f06f1b80f9259a
+  Google-Mobile-Ads-SDK: d1bcdbd8347a105a687345b8511701172a5074e9
+  GoogleToolboxForMac: 8e329f1b599f2512c6b10676d45736bcc2cbbeb0
   IQKeyboardManager: 322c7405df3eb5f7e50dede32ea937bf3d4364e0
   MBProgressHUD: 4890f671c94e8a0f3cf959aa731e9de2f036d71a
+  UMengAnalytics: ef8d45f94c0e5771dc364cf6a5731d9d3b101da2
 
-PODFILE CHECKSUM: 9724d076b23a999604c247bd9499d72546a001b3
+PODFILE CHECKSUM: d969dbb881e75304c0c8aa00b9ffd953a77e540b
 
 COCOAPODS: 1.1.1

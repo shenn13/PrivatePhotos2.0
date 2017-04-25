@@ -11,6 +11,7 @@
 		1212BFE31E83590C00BCD9E7 /* QLPreviewController+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1212BFE21E83590C00BCD9E7 /* QLPreviewController+XP.m */; };
 		1214703C1E7FD05900FD5E51 /* XPSettingViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 1214703B1E7FD05900FD5E51 /* XPSettingViewController.m */; };
 		12147DB31E6F92B5009D5321 /* XPAlbumDetailViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 12147DB21E6F92B5009D5321 /* XPAlbumDetailViewController.m */; };
+		121C11811E9DCA1D008AB02D /* Image+Snapshot.m in Sources */ = {isa = PBXBuildFile; fileRef = 121C11801E9DCA1D008AB02D /* Image+Snapshot.m */; };
 		121DEB3E1E79125200491C97 /* XPSQLiteManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 121DEB3D1E79125100491C97 /* XPSQLiteManager.m */; };
 		1224BB061E6E41E200CCCD73 /* UIColor+XP.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB051E6E41E200CCCD73 /* UIColor+XP.m */; };
 		1224BB0B1E6E901700CCCD73 /* GHPopupEditView.m in Sources */ = {isa = PBXBuildFile; fileRef = 1224BB0A1E6E901700CCCD73 /* GHPopupEditView.m */; };
@@ -50,19 +51,8 @@
 		548055DE1E6702D70040143A /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 548055DB1E6702D70040143A /* AppDelegate.m */; };
 		548055E01E6702D70040143A /* main.m in Sources */ = {isa = PBXBuildFile; fileRef = 548055DD1E6702D70040143A /* main.m */; };
 		548055E91E6705F80040143A /* XPHomeViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 548055E81E6705F80040143A /* XPHomeViewController.m */; };
-		6407C2001EA0A0FA004080AE /* AFNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 6407C1FF1EA0A0FA004080AE /* AFNetworkingManager.m */; };
-		649318531E9F9F1400CD287A /* CKAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649318521E9F9F1400CD287A /* CKAlertViewController.m */; };
-		64EB3CB41E961F8A00A32B4E /* libz.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CB31E961F8A00A32B4E /* libz.tbd */; };
-		64EB3CB61E961F9800A32B4E /* libstdc++.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CB51E961F9800A32B4E /* libstdc++.tbd */; };
-		64EB3CB81E961FA200A32B4E /* CoreTelephony.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CB71E961FA200A32B4E /* CoreTelephony.framework */; };
-		64EB3CBA1E961FAC00A32B4E /* libsqlite3.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CB91E961FAC00A32B4E /* libsqlite3.tbd */; };
-		64EB3CBC1E961FB600A32B4E /* CoreGraphics.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CBB1E961FB600A32B4E /* CoreGraphics.framework */; };
-		64EB3CBE1E961FBE00A32B4E /* SystemConfiguration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CBD1E961FBE00A32B4E /* SystemConfiguration.framework */; };
-		64EB3CC01E961FC800A32B4E /* libiconv.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CBF1E961FC800A32B4E /* libiconv.tbd */; };
-		64EB3CC21E961FD000A32B4E /* Security.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CC11E961FD000A32B4E /* Security.framework */; };
-		64EB3CC41E961FD900A32B4E /* QuartzCore.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CC31E961FD900A32B4E /* QuartzCore.framework */; };
-		64EB3CC61E961FEA00A32B4E /* MediaPlayer.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CC51E961FEA00A32B4E /* MediaPlayer.framework */; };
-		64EB3CD01E9621D700A32B4E /* UMMobClick.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 64EB3CCF1E9621D700A32B4E /* UMMobClick.framework */; };
+		649BACB21EAF36C0000A634A /* CKAlertViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 649BACB11EAF36C0000A634A /* CKAlertViewController.m */; };
+		649BACB51EAF542E000A634A /* AFNetworkingManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 649BACB41EAF542E000A634A /* AFNetworkingManager.m */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -74,6 +64,8 @@
 		1214703B1E7FD05900FD5E51 /* XPSettingViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSettingViewController.m; sourceTree = "<group>"; };
 		12147DB11E6F92B5009D5321 /* XPAlbumDetailViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPAlbumDetailViewController.h; sourceTree = "<group>"; };
 		12147DB21E6F92B5009D5321 /* XPAlbumDetailViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPAlbumDetailViewController.m; sourceTree = "<group>"; };
+		121C117F1E9DCA1D008AB02D /* Image+Snapshot.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "Image+Snapshot.h"; sourceTree = "<group>"; };
+		121C11801E9DCA1D008AB02D /* Image+Snapshot.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "Image+Snapshot.m"; sourceTree = "<group>"; };
 		121DEB3C1E79125100491C97 /* XPSQLiteManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPSQLiteManager.h; sourceTree = "<group>"; };
 		121DEB3D1E79125100491C97 /* XPSQLiteManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPSQLiteManager.m; sourceTree = "<group>"; };
 		1224BB041E6E41E200CCCD73 /* UIColor+XP.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIColor+XP.h"; sourceTree = "<group>"; };
@@ -151,21 +143,10 @@
 		548055DD1E6702D70040143A /* main.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = main.m; sourceTree = "<group>"; };
 		548055E71E6705F80040143A /* XPHomeViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = XPHomeViewController.h; sourceTree = "<group>"; };
 		548055E81E6705F80040143A /* XPHomeViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = XPHomeViewController.m; sourceTree = "<group>"; };
-		6407C1FE1EA0A0FA004080AE /* AFNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingManager.h; sourceTree = "<group>"; };
-		6407C1FF1EA0A0FA004080AE /* AFNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingManager.m; sourceTree = "<group>"; };
-		649318511E9F9F1400CD287A /* CKAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAlertViewController.h; sourceTree = "<group>"; };
-		649318521E9F9F1400CD287A /* CKAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAlertViewController.m; sourceTree = "<group>"; };
-		64EB3CB31E961F8A00A32B4E /* libz.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libz.tbd; path = usr/lib/libz.tbd; sourceTree = SDKROOT; };
-		64EB3CB51E961F9800A32B4E /* libstdc++.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = "libstdc++.tbd"; path = "usr/lib/libstdc++.tbd"; sourceTree = SDKROOT; };
-		64EB3CB71E961FA200A32B4E /* CoreTelephony.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreTelephony.framework; path = System/Library/Frameworks/CoreTelephony.framework; sourceTree = SDKROOT; };
-		64EB3CB91E961FAC00A32B4E /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
-		64EB3CBB1E961FB600A32B4E /* CoreGraphics.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = CoreGraphics.framework; path = System/Library/Frameworks/CoreGraphics.framework; sourceTree = SDKROOT; };
-		64EB3CBD1E961FBE00A32B4E /* SystemConfiguration.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = SystemConfiguration.framework; path = System/Library/Frameworks/SystemConfiguration.framework; sourceTree = SDKROOT; };
-		64EB3CBF1E961FC800A32B4E /* libiconv.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libiconv.tbd; path = usr/lib/libiconv.tbd; sourceTree = SDKROOT; };
-		64EB3CC11E961FD000A32B4E /* Security.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = Security.framework; path = System/Library/Frameworks/Security.framework; sourceTree = SDKROOT; };
-		64EB3CC31E961FD900A32B4E /* QuartzCore.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = QuartzCore.framework; path = System/Library/Frameworks/QuartzCore.framework; sourceTree = SDKROOT; };
-		64EB3CC51E961FEA00A32B4E /* MediaPlayer.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; name = MediaPlayer.framework; path = System/Library/Frameworks/MediaPlayer.framework; sourceTree = SDKROOT; };
-		64EB3CCF1E9621D700A32B4E /* UMMobClick.framework */ = {isa = PBXFileReference; lastKnownFileType = wrapper.framework; path = UMMobClick.framework; sourceTree = "<group>"; };
+		649BACB01EAF36C0000A634A /* CKAlertViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = CKAlertViewController.h; sourceTree = "<group>"; };
+		649BACB11EAF36C0000A634A /* CKAlertViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = CKAlertViewController.m; sourceTree = "<group>"; };
+		649BACB31EAF542E000A634A /* AFNetworkingManager.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = AFNetworkingManager.h; sourceTree = "<group>"; };
+		649BACB41EAF542E000A634A /* AFNetworkingManager.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = AFNetworkingManager.m; sourceTree = "<group>"; };
 		822EE1E3D6B604F264943CC6 /* Pods-PhotoSecurity.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-PhotoSecurity.release.xcconfig"; path = "Pods/Target Support Files/Pods-PhotoSecurity/Pods-PhotoSecurity.release.xcconfig"; sourceTree = "<group>"; };
 		CB161BA3F61719AAE63C0CFE /* libPods-PhotoSecurity.a */ = {isa = PBXFileReference; explicitFileType = archive.ar; includeInIndex = 0; path = "libPods-PhotoSecurity.a"; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -175,17 +156,6 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				64EB3CC61E961FEA00A32B4E /* MediaPlayer.framework in Frameworks */,
-				64EB3CC41E961FD900A32B4E /* QuartzCore.framework in Frameworks */,
-				64EB3CC21E961FD000A32B4E /* Security.framework in Frameworks */,
-				64EB3CC01E961FC800A32B4E /* libiconv.tbd in Frameworks */,
-				64EB3CBE1E961FBE00A32B4E /* SystemConfiguration.framework in Frameworks */,
-				64EB3CBC1E961FB600A32B4E /* CoreGraphics.framework in Frameworks */,
-				64EB3CBA1E961FAC00A32B4E /* libsqlite3.tbd in Frameworks */,
-				64EB3CB81E961FA200A32B4E /* CoreTelephony.framework in Frameworks */,
-				64EB3CB61E961F9800A32B4E /* libstdc++.tbd in Frameworks */,
-				64EB3CB41E961F8A00A32B4E /* libz.tbd in Frameworks */,
-				64EB3CD01E9621D700A32B4E /* UMMobClick.framework in Frameworks */,
 				12972AD01E6D08880092D64B /* LocalAuthentication.framework in Frameworks */,
 				4ACD21B9B3E2750FAF0C1AF6 /* libPods-PhotoSecurity.a in Frameworks */,
 			);
@@ -360,8 +330,8 @@
 		122EE0451E67C13800FCAF98 /* Utils */ = {
 			isa = PBXGroup;
 			children = (
-				6407C1FE1EA0A0FA004080AE /* AFNetworkingManager.h */,
-				6407C1FF1EA0A0FA004080AE /* AFNetworkingManager.m */,
+				649BACB31EAF542E000A634A /* AFNetworkingManager.h */,
+				649BACB41EAF542E000A634A /* AFNetworkingManager.m */,
 				122EE0461E67C15400FCAF98 /* functions.h */,
 				122EE0471E67C15400FCAF98 /* functions.m */,
 				129C3CDF1E6D325100A52448 /* XPPasswordTool.h */,
@@ -377,6 +347,8 @@
 		122EE04D1E67F2D100FCAF98 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				121C117F1E9DCA1D008AB02D /* Image+Snapshot.h */,
+				121C11801E9DCA1D008AB02D /* Image+Snapshot.m */,
 				122EE0541E67F51700FCAF98 /* UIImage+XP.h */,
 				122EE0551E67F51700FCAF98 /* UIImage+XP.m */,
 				122EE0511E67F46A00FCAF98 /* UIView+XP.h */,
@@ -405,17 +377,6 @@
 		12972ACE1E6D08880092D64B /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
-				64EB3CCF1E9621D700A32B4E /* UMMobClick.framework */,
-				64EB3CC51E961FEA00A32B4E /* MediaPlayer.framework */,
-				64EB3CC31E961FD900A32B4E /* QuartzCore.framework */,
-				64EB3CC11E961FD000A32B4E /* Security.framework */,
-				64EB3CBF1E961FC800A32B4E /* libiconv.tbd */,
-				64EB3CBD1E961FBE00A32B4E /* SystemConfiguration.framework */,
-				64EB3CBB1E961FB600A32B4E /* CoreGraphics.framework */,
-				64EB3CB91E961FAC00A32B4E /* libsqlite3.tbd */,
-				64EB3CB71E961FA200A32B4E /* CoreTelephony.framework */,
-				64EB3CB51E961F9800A32B4E /* libstdc++.tbd */,
-				64EB3CB31E961F8A00A32B4E /* libz.tbd */,
 				12972ACF1E6D08880092D64B /* LocalAuthentication.framework */,
 				CB161BA3F61719AAE63C0CFE /* libPods-PhotoSecurity.a */,
 			);
@@ -461,7 +422,7 @@
 		548055C11E6701750040143A /* PhotoSecurity */ = {
 			isa = PBXGroup;
 			children = (
-				649318501E9F9F1400CD287A /* CKAlertViewController */,
+				649BACAF1EAF36C0000A634A /* CKAlertViewController */,
 				548055CE1E6701750040143A /* Assets.xcassets */,
 				548055D01E6701750040143A /* LaunchScreen.storyboard */,
 				548055CB1E6701750040143A /* Main.storyboard */,
@@ -470,9 +431,17 @@
 				548055E31E6705BE0040143A /* Home */,
 				122E01211E71089900CE8E4C /* Photos */,
 				121470381E7FD04300FD5E51 /* Setting */,
+				548055C21E6701750040143A /* Supporting Files */,
 				548055D91E6702D70040143A /* System */,
 			);
 			path = PhotoSecurity;
+			sourceTree = "<group>";
+		};
+		548055C21E6701750040143A /* Supporting Files */ = {
+			isa = PBXGroup;
+			children = (
+			);
+			name = "Supporting Files";
 			sourceTree = "<group>";
 		};
 		548055D91E6702D70040143A /* System */ = {
@@ -512,11 +481,11 @@
 			path = Controller;
 			sourceTree = "<group>";
 		};
-		649318501E9F9F1400CD287A /* CKAlertViewController */ = {
+		649BACAF1EAF36C0000A634A /* CKAlertViewController */ = {
 			isa = PBXGroup;
 			children = (
-				649318511E9F9F1400CD287A /* CKAlertViewController.h */,
-				649318521E9F9F1400CD287A /* CKAlertViewController.m */,
+				649BACB01EAF36C0000A634A /* CKAlertViewController.h */,
+				649BACB11EAF36C0000A634A /* CKAlertViewController.m */,
 			);
 			path = CKAlertViewController;
 			sourceTree = "<group>";
@@ -664,11 +633,13 @@
 				12147DB31E6F92B5009D5321 /* XPAlbumDetailViewController.m in Sources */,
 				122EE0501E67F2E800FCAF98 /* UIViewController+XP.m in Sources */,
 				1224BB141E6EB70900CCCD73 /* XPAlbumModel.m in Sources */,
+				649BACB21EAF36C0000A634A /* CKAlertViewController.m in Sources */,
 				1226BC321E8515D00022C882 /* XMFTPConnection.m in Sources */,
 				122E012C1E712A4D00CE8E4C /* XPAlbumCollectionModel.m in Sources */,
 				122E01251E7108F600CE8E4C /* XPPhotoPickerViewController.m in Sources */,
 				1226BC331E8515D00022C882 /* XMFTPDataConnection.m in Sources */,
 				122EE0561E67F51700FCAF98 /* UIImage+XP.m in Sources */,
+				649BACB51EAF542E000A634A /* AFNetworkingManager.m in Sources */,
 				129C3CE11E6D325100A52448 /* XPPasswordTool.m in Sources */,
 				129C3CE41E6D4DFD00A52448 /* XPProgressHUD.m in Sources */,
 				129C3CDE1E6D14E600A52448 /* XPUnlockViewController.m in Sources */,
@@ -679,15 +650,14 @@
 				124529231E80CBDB007222C4 /* XPChangePasswordViewController.m in Sources */,
 				1214703C1E7FD05900FD5E51 /* XPSettingViewController.m in Sources */,
 				1226BC341E8515D00022C882 /* XMFTPHelper.m in Sources */,
+				121C11811E9DCA1D008AB02D /* Image+Snapshot.m in Sources */,
 				1212BFE31E83590C00BCD9E7 /* QLPreviewController+XP.m in Sources */,
 				548055DE1E6702D70040143A /* AppDelegate.m in Sources */,
-				649318531E9F9F1400CD287A /* CKAlertViewController.m in Sources */,
 				122E01331E714EF700CE8E4C /* XPPhotoCollectionViewCell.m in Sources */,
 				122EE04C1E67C40800FCAF98 /* XPNavigationController.m in Sources */,
 				1226BC301E8515D00022C882 /* AsyncSocket.m in Sources */,
 				12F4AECE1E7A2DD90034333E /* XPPhotoModel.m in Sources */,
 				12F4AED21E7A79230034333E /* XPAlbumDetailCell.m in Sources */,
-				6407C2001EA0A0FA004080AE /* AFNetworkingManager.m in Sources */,
 				123F8E2B1E694D4F005379D2 /* NSString+XP.m in Sources */,
 				122EE0481E67C15400FCAF98 /* functions.m in Sources */,
 				122EE0531E67F46A00FCAF98 /* UIView+XP.m in Sources */,
@@ -840,18 +810,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: peng zhi yang (X75R9556F3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X75R9556F3;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PhotoSecurity/System/PhotoSecurity-prefix.pch";
 				INFOPLIST_FILE = PhotoSecurity/System/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PhotoSecurity/General/Library/libs",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jobszbb.PrivatePhotosSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -866,18 +828,10 @@
 				CODE_SIGN_IDENTITY = "iPhone Distribution: peng zhi yang (X75R9556F3)";
 				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				DEVELOPMENT_TEAM = X75R9556F3;
-				FRAMEWORK_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)",
-				);
 				GCC_PREFIX_HEADER = "$(SRCROOT)/PhotoSecurity/System/PhotoSecurity-prefix.pch";
 				INFOPLIST_FILE = PhotoSecurity/System/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 8.0;
 				LD_RUNPATH_SEARCH_PATHS = "$(inherited) @executable_path/Frameworks";
-				LIBRARY_SEARCH_PATHS = (
-					"$(inherited)",
-					"$(PROJECT_DIR)/PhotoSecurity/General/Library/libs",
-				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.jobszbb.PrivatePhotosSafe;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
