@@ -54,10 +54,7 @@ static CGFloat const kCellBorderMargin = 1.0;
 - (void)viewDidLoad {
     [super viewDidLoad];
     self.title = self.album.name;
-    
-    [self setInterstitial];
-    
-    
+   
     
     NSInteger x = arc4random() % 7;
     if (3== x){
@@ -69,12 +66,11 @@ static CGFloat const kCellBorderMargin = 1.0;
             //*****************************************************
         });
     }else if(5 == x){
-        dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0/*延迟执行时间*/ * NSEC_PER_SEC));
-        dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+       
             //显示广告**********************************************
-            [self startShowAdMob];
+            [self setInterstitial];
             //*****************************************************
-        });
+      
     }else{
         dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0/*延迟执行时间*/ * NSEC_PER_SEC));
         dispatch_after(delayTime, dispatch_get_main_queue(), ^{
@@ -251,7 +247,12 @@ static CGFloat const kCellBorderMargin = 1.0;
                         }
                     }];
                 }]];
-                [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:nil]];
+                
+                [alert addAction:[UIAlertAction actionWithTitle:NSLocalizedString(@"Cancel", nil) style:UIAlertActionStyleCancel handler:^(UIAlertAction * _Nonnull action) {
+                    //显示广告**********************************************
+                    [self setInterstitial];
+                    //*****************************************************
+                }]];
                 
                 [self presentViewController:alert animated:YES completion:nil];
                 
@@ -453,13 +454,10 @@ static CGFloat const kCellBorderMargin = 1.0;
             [self.collectionView reloadItemsAtIndexPaths:indexPaths];
         }
         [_selectMaps removeAllObjects];
-        
-        dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0/*延迟执行时间*/ * NSEC_PER_SEC));
-        dispatch_after(delayTime, dispatch_get_main_queue(), ^{
+
             //显示广告**********************************************
-            [self startShowAdMob];
-            //*****************************************************
-        });
+            [self setInterstitial];
+            //**********************************************
     }
 }
 
@@ -656,7 +654,6 @@ static CGFloat const kCellBorderMargin = 1.0;
     
     self.interstitial = [self createNewInterstitial];
 }
-
 //这个部分是因为多次调用 所以封装成一个方法
 - (GADInterstitial *)createNewInterstitial {
     
@@ -665,20 +662,15 @@ static CGFloat const kCellBorderMargin = 1.0;
     [interstitial loadRequest:[GADRequest request]];
     return interstitial;
 }
--(void)startShowAdMob{
+
+#pragma mark - GADInterstitialDelegate -
+- (void)interstitialDidReceiveAd:(GADInterstitial *)ad{
     
     if ([self.interstitial isReady]) {
         [self.interstitial presentFromRootViewController:self];
     }else{
-        
         NSLog(@"not ready~~~~");
     }
-}
-
-#pragma mark - GADInterstitialDelegate -
-//GADInterstitial 是仅限一次性使用的对象。若要请求另一个插页式广告，您需要分配一个新的 GADInterstitial 对象。
-- (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
-    [self setInterstitial];
 }
 //分配失败重新分配
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {

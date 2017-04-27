@@ -41,12 +41,6 @@
     
     self.title = NSLocalizedString(@"FTP Service", nil);
     
-    dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0/*延迟执行时间*/ * NSEC_PER_SEC));
-    dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-        //显示广告**********************************************
-        [self startShowAdMob];
-        //*****************************************************
-    });
 }
 
 - (void)didReceiveMemoryWarning {
@@ -84,10 +78,8 @@
         [self stopFTPServer];
     }
     
+    [self setInterstitial];
     
-    //显示广告**********************************************
-    [self startShowAdMob];
-    //*****************************************************
 }
 
 #pragma mark - Private
@@ -114,20 +106,16 @@
     [interstitial loadRequest:[GADRequest request]];
     return interstitial;
 }
--(void)startShowAdMob{
+
+
+#pragma mark - GADInterstitialDelegate -
+- (void)interstitialDidReceiveAd:(GADInterstitial *)ad{
     
     if ([self.interstitial isReady]) {
         [self.interstitial presentFromRootViewController:self];
     }else{
-        
         NSLog(@"not isReady");
     }
-}
-
-#pragma mark - GADInterstitialDelegate -
-//GADInterstitial 是仅限一次性使用的对象。若要请求另一个插页式广告，您需要分配一个新的 GADInterstitial 对象。
-- (void)interstitialDidDismissScreen:(GADInterstitial *)ad {
-    [self setInterstitial];
 }
 //分配失败重新分配
 - (void)interstitial:(GADInterstitial *)ad didFailToReceiveAdWithError:(GADRequestError *)error {

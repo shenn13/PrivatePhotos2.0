@@ -10,7 +10,7 @@
 #import "GHPopupEditView.h"
 #import "XPUnlockViewController.h"
 #import "UMMobClick/MobClick.h"
-
+@import Firebase;
 @interface AppDelegate ()
 
 @end
@@ -34,6 +34,8 @@
     UMConfigInstance.channelId = nil;
     [MobClick startWithConfigure:UMConfigInstance];//配置以上参数后调用此方法初始化SDK！
     
+//    [FIRApp configure];
+    [GADMobileAds configureWithApplicationID:AdMob_APP_ID];
     
     return YES;
 }
