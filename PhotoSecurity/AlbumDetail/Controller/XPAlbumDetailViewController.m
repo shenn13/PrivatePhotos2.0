@@ -56,17 +56,8 @@ static CGFloat const kCellBorderMargin = 1.0;
     self.title = self.album.name;
    
     
-    NSInteger x = arc4random() % 7;
-    if (3== x){
-        
-        dispatch_time_t delayTime = dispatch_time(DISPATCH_TIME_NOW, (int64_t)(1.0/*延迟执行时间*/ * NSEC_PER_SEC));
-        dispatch_after(delayTime, dispatch_get_main_queue(), ^{
-            //**********************************************
-            [self checkVersion];
-            //*****************************************************
-        });
-    }else if(5 == x){
-       
+    NSInteger x = arc4random() % 3;
+   if(1 == x){
             //显示广告**********************************************
             [self setInterstitial];
             //*****************************************************
@@ -689,6 +680,9 @@ static CGFloat const kCellBorderMargin = 1.0;
             
             CKAlertAction *cancel = [CKAlertAction actionWithTitle:NSLocalizedString(@"No~~", nil) handler:^(CKAlertAction *action) {
                 NSLog(@"点击了 %@ 按钮",action.title);
+                //显示广告**********************************************
+                [self setInterstitial];
+                //*****************************************************
             }];
             
             CKAlertAction *sure = [CKAlertAction actionWithTitle:NSLocalizedString(@"OK~~", nil) handler:^(CKAlertAction *action) {
@@ -707,43 +701,4 @@ static CGFloat const kCellBorderMargin = 1.0;
     }];
     
 }
-
--(void)checkVersion{
-    
-    NSString *newVersion;
-    NSURL *url = [NSURL URLWithString:@"http://itunes.apple.com/cn/lookup?id=1226885234"];
-    //这个URL地址是该app在iTunes connect里面的相关配置信息。其中id是该app在app store唯一的ID编号。
-    NSString *jsonResponseString = [NSString stringWithContentsOfURL:url encoding:NSUTF8StringEncoding error:nil];
-    NSData *data = [jsonResponseString dataUsingEncoding:NSUTF8StringEncoding];
-    id json = [NSJSONSerialization JSONObjectWithData:data options:NSJSONReadingMutableContainers error:nil];
-    NSArray *array = json[@"results"];
-    for (NSDictionary *dic in array) {
-        newVersion = [dic valueForKey:@"version"];
-    }
-    //获取本地软件的版本号
-    NSString *localVersion = [[[NSBundle mainBundle]infoDictionary] objectForKey:@"CFBundleVersion"];
-    
-    //对比发现的新版本和本地的版本
-    if ([newVersion floatValue] > [localVersion floatValue]){
-        
-        
-        CKAlertViewController *alertVC = [CKAlertViewController alertControllerWithTitle:NSLocalizedString(@"Update", nil) message:NSLocalizedString(@"Found the new version, whether to download the new version?", nil) ];
-        
-        CKAlertAction *cancel = [CKAlertAction actionWithTitle:NSLocalizedString(@"No~~", nil) handler:^(CKAlertAction *action) {
-            NSLog(@"点击了 %@ 按钮",action.title);
-        }];
-        
-        CKAlertAction *sure = [CKAlertAction actionWithTitle:NSLocalizedString(@"OK~~", nil) handler:^(CKAlertAction *action) {
-            NSLog(@"点击了 %@ 按钮",action.title);
-            
-            [[UIApplication sharedApplication] openURL:[NSURL URLWithString:@"https://itunes.apple.com/us/app/%E7%85%A7%E7%89%87%E4%BF%9D%E9%99%A9%E7%AE%B1pro-%E6%8C%87%E7%BA%B9%E5%8A%A0%E5%AF%86-%E9%94%81%E4%BD%8F%E9%9A%90%E7%A7%81/id1226885234?l=zh&ls=1&mt=8"]];
-            
-        }];
-        [alertVC addAction:cancel];
-        [alertVC addAction:sure];
-        
-        [self presentViewController:alertVC animated:NO completion:nil];
-    }
-}
-
 @end
